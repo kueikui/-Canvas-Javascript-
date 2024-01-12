@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>畫出圓形、三角形和正方形</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="400" style="border:1px solid black;"></canvas>
+
+    <script>
+        // 獲取畫布元素
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // 繪製圓形的函數
+        ctx.lineWidth=5;
+        ctx.beginPath();
+        ctx.strokeStyle="red";//設定框的顏色 Style S是大寫
+        ctx.fillStyle="green";//設定塗滿的顏色
+        ctx.arc(100, 100, 50, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+        
+        // 繪製三角形的函數
+        ctx.beginPath();
+        ctx.strokeStyle="blue";
+        ctx.fillStyle="yellow";
+        ctx.moveTo(250, 100);
+        ctx.lineTo(250, 200);
+        ctx.lineTo(350, 200);
+        ctx.closePath();
+        ctx.stroke();
+        ctx.fill();  
+
+        // 繪製正方形的函數
+        ctx.strokeStyle="purple";
+        ctx.fillStyle="pink";
+       ctx.strokeRect(100,250, 100, 100);
+       ctx.fillRect(100,250,100,100);
+       //ctx.fillRect(100,250,50,100); //只塗一半
+    </script>
+</body>
+</html>

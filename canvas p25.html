@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="100" style="border:2px solid;border-color:red"></canvas>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "green";
+        ctx.fillRect(0, 0, 150, 75);
+
+        ctx.fillStyle = "rgba(0,0,200,0.5)";
+        ctx.fillRect(50, 30, 150, 75);
+
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = "purple";
+        ctx.strokeRect(0, 0, 150, 75);
+
+        ctx.strokeStyle = "rgba(0,0,200,0.5)";
+        ctx.strokeRect(50, 30, 150, 75);
+
+        //ctx.clearRect(20,20,100,100);
+    </script>
+</body>
+</html>

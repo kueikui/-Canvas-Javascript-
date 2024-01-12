@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>使用Canvas畫圓形</title>
+</head>
+<body>
+  <canvas id="myCanvas" width="1000" height="1000" style="border:3px solid black;"></canvas>
+
+  <script>
+    // 獲取畫布元素
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    ctx.fillStyle ="red";
+    ctx.fillRect(200,200,500,500);
+
+    ctx.lineWidth=50;
+    ctx.strokeStyle="green";
+    ctx.strokeRect(200,200,500,500);
+  </script>
+</body>
+</html>
